@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C72D52215E5CC65009D6DF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C72D52115E5CC65009D6DF1 /* UIKit.framework */; };
+		9C72D52415E5CC65009D6DF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C72D52315E5CC65009D6DF1 /* Foundation.framework */; };
+		9C72D52615E5CC65009D6DF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C72D52515E5CC65009D6DF1 /* CoreGraphics.framework */; };
+		9C72D52C15E5CC65009D6DF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C72D52A15E5CC65009D6DF1 /* InfoPlist.strings */; };
+		9C72D52E15E5CC65009D6DF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D52D15E5CC65009D6DF1 /* main.m */; };
+		9C72D53215E5CC65009D6DF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D53115E5CC65009D6DF1 /* AppDelegate.m */; };
+		9C72D53515E5CC65009D6DF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D53415E5CC65009D6DF1 /* ViewController.m */; };
+		9C72D53815E5CC65009D6DF1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C72D53615E5CC65009D6DF1 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C72D51D15E5CC65009D6DF1 /* QuickContactsTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickContactsTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C72D52115E5CC65009D6DF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C72D52315E5CC65009D6DF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C72D52515E5CC65009D6DF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9C72D52915E5CC65009D6DF1 /* QuickContactsTableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickContactsTableView-Info.plist"; sourceTree = "<group>"; };
+		9C72D52B15E5CC65009D6DF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C72D52D15E5CC65009D6DF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C72D52F15E5CC65009D6DF1 /* QuickContactsTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickContactsTableView-Prefix.pch"; sourceTree = "<group>"; };
+		9C72D53015E5CC65009D6DF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C72D53115E5CC65009D6DF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C72D53315E5CC65009D6DF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C72D53415E5CC65009D6DF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C72D53715E5CC65009D6DF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C72D51A15E5CC65009D6DF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C72D52215E5CC65009D6DF1 /* UIKit.framework in Frameworks */,
+				9C72D52415E5CC65009D6DF1 /* Foundation.framework in Frameworks */,
+				9C72D52615E5CC65009D6DF1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C72D51215E5CC65009D6DF1 = {
+			isa = PBXGroup;
+			children = (
+				9C72D52715E5CC65009D6DF1 /* QuickContactsTableView */,
+				9C72D52015E5CC65009D6DF1 /* Frameworks */,
+				9C72D51E15E5CC65009D6DF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C72D51E15E5CC65009D6DF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C72D51D15E5CC65009D6DF1 /* QuickContactsTableView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C72D52015E5CC65009D6DF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C72D52115E5CC65009D6DF1 /* UIKit.framework */,
+				9C72D52315E5CC65009D6DF1 /* Foundation.framework */,
+				9C72D52515E5CC65009D6DF1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C72D52715E5CC65009D6DF1 /* QuickContactsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9C72D53015E5CC65009D6DF1 /* AppDelegate.h */,
+				9C72D53115E5CC65009D6DF1 /* AppDelegate.m */,
+				9C72D53315E5CC65009D6DF1 /* ViewController.h */,
+				9C72D53415E5CC65009D6DF1 /* ViewController.m */,
+				9C72D53615E5CC65009D6DF1 /* ViewController.xib */,
+				9C72D52815E5CC65009D6DF1 /* Supporting Files */,
+			);
+			path = QuickContactsTableView;
+			sourceTree = "<group>";
+		};
+		9C72D52815E5CC65009D6DF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C72D52915E5CC65009D6DF1 /* QuickContactsTableView-Info.plist */,
+				9C72D52A15E5CC65009D6DF1 /* InfoPlist.strings */,
+				9C72D52D15E5CC65009D6DF1 /* main.m */,
+				9C72D52F15E5CC65009D6DF1 /* QuickContactsTableView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C72D51C15E5CC65009D6DF1 /* QuickContactsTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C72D53B15E5CC65009D6DF1 /* Build configuration list for PBXNativeTarget "QuickContactsTableView" */;
+			buildPhases = (
+				9C72D51915E5CC65009D6DF1 /* Sources */,
+				9C72D51A15E5CC65009D6DF1 /* Frameworks */,
+				9C72D51B15E5CC65009D6DF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickContactsTableView;
+			productName = QuickContactsTableView;
+			productReference = 9C72D51D15E5CC65009D6DF1 /* QuickContactsTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C72D51415E5CC65009D6DF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "John Graham";
+			};
+			buildConfigurationList = 9C72D51715E5CC65009D6DF1 /* Build configuration list for PBXProject "QuickContactsTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C72D51215E5CC65009D6DF1;
+			productRefGroup = 9C72D51E15E5CC65009D6DF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C72D51C15E5CC65009D6DF1 /* QuickContactsTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C72D51B15E5CC65009D6DF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C72D52C15E5CC65009D6DF1 /* InfoPlist.strings in Resources */,
+				9C72D53815E5CC65009D6DF1 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C72D51915E5CC65009D6DF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C72D52E15E5CC65009D6DF1 /* main.m in Sources */,
+				9C72D53215E5CC65009D6DF1 /* AppDelegate.m in Sources */,
+				9C72D53515E5CC65009D6DF1 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C72D52A15E5CC65009D6DF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C72D52B15E5CC65009D6DF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C72D53615E5CC65009D6DF1 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C72D53715E5CC65009D6DF1 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C72D53915E5CC65009D6DF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9C72D53A15E5CC65009D6DF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C72D53C15E5CC65009D6DF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickContactsTableView/QuickContactsTableView-Prefix.pch";
+				INFOPLIST_FILE = "QuickContactsTableView/QuickContactsTableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C72D53D15E5CC65009D6DF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickContactsTableView/QuickContactsTableView-Prefix.pch";
+				INFOPLIST_FILE = "QuickContactsTableView/QuickContactsTableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C72D51715E5CC65009D6DF1 /* Build configuration list for PBXProject "QuickContactsTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C72D53915E5CC65009D6DF1 /* Debug */,
+				9C72D53A15E5CC65009D6DF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C72D53B15E5CC65009D6DF1 /* Build configuration list for PBXNativeTarget "QuickContactsTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C72D53C15E5CC65009D6DF1 /* Debug */,
+				9C72D53D15E5CC65009D6DF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C72D51415E5CC65009D6DF1 /* Project object */;
+}
