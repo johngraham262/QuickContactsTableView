@@ -1,52 +1,82 @@
-//
-//  AppDelegate.m
-//  QuickContactsTableView
-//
-//  Created by John Graham on 8/22/12.
-//  Copyright (c) 2012 John Graham. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "TableViewController.h"
 
-#import "ViewController.h"
+#import <Foundation/Foundation.h>
+#import <AddressBook/AddressBook.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+
+    // IMPORTANT: Add "AddressBook.framework" to Targets --> Summary --> Linked Frameworks & Libraries
+    
+    // Create the address book object.
+    ABAddressBookRef addressBook = ABAddressBookCreate();
+    CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(addressBook);
+    CFIndex personCount = ABAddressBookGetPersonCount(addressBook);
+    
+    NSMutableArray *contactsArray = ((personCount > 0 && personCount < 100000) ?
+                                     [NSMutableArray arrayWithCapacity:personCount] :
+                                     [NSMutableArray arrayWithCapacity:250]);
+    //CFIndex is weird and sometimes returns max NSInteger, which overflows array capacity
+    
+    // Create the array of contact objects to upload.
+    for (int i = 0; i < personCount; i++) {
+        
+        ABRecordRef person = CFArrayGetValueAtIndex(allPeople, i);
+        CFRetain(person);
+        
+        Contact *contact = [[Contact alloc] init];
+        
+        // Parse the name from the Address book entity.
+        NSString *firstName = CFBridgingRelease(ABRecordCopyValue(person,
+                                                                  kABPersonFirstNameProperty));
+        NSString *middleName = CFBridgingRelease(ABRecordCopyValue(person,
+                                                                   kABPersonMiddleNameProperty));
+        NSString *lastName = CFBridgingRelease(ABRecordCopyValue(person,
+                                                                 kABPersonLastNameProperty));
+
+        if (firstName || middleName || lastName) {
+            contact.name = [NSString stringWithFormat:@"%@ %@ %@",
+                            (firstName ? firstName : @""),
+                            (middleName ? middleName : @""),
+                            (lastName ? lastName : @""), nil];
+            // May still contain extraneous white spaces.
+        }
+        
+        // Phones
+        ABMultiValueRef phonesRefs = ABRecordCopyValue(person, kABPersonPhoneProperty);
+        contact.phones = CFBridgingRelease(ABMultiValueCopyArrayOfAllValues(phonesRefs));
+        CFRelease(phonesRefs);
+        
+        // Emails
+        ABMultiValueRef emails = ABRecordCopyValue(person, kABPersonEmailProperty);
+        contact.emails = CFBridgingRelease(ABMultiValueCopyArrayOfAllValues(emails));
+        CFRelease(emails);
+        
+        CFRelease(person);
+        
+        [contact configureName];
+        [contactsArray addObject:contact];
+    }
+    
+    // Sort array by name
+    [contactsArray sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        Contact *contact1 = (Contact *)obj1;
+        Contact *contact2 = (Contact *)obj2;
+        return [contact1.sortName compare:contact2.sortName];
+    }];
+    
+    // Init and show the root tableView
+    TableViewController *tableViewController = [[TableViewController alloc]
+                                                initWithStyle:UITableViewStylePlain];
+    tableViewController.allContacts = contactsArray;
+    self.window.rootViewController =
+    [[UINavigationController alloc] initWithRootViewController:tableViewController];
     [self.window makeKeyAndVisible];
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end

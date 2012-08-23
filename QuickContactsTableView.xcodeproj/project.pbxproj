@@ -13,8 +13,8 @@
 		9C72D52C15E5CC65009D6DF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C72D52A15E5CC65009D6DF1 /* InfoPlist.strings */; };
 		9C72D52E15E5CC65009D6DF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D52D15E5CC65009D6DF1 /* main.m */; };
 		9C72D53215E5CC65009D6DF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D53115E5CC65009D6DF1 /* AppDelegate.m */; };
-		9C72D53515E5CC65009D6DF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D53415E5CC65009D6DF1 /* ViewController.m */; };
-		9C72D53815E5CC65009D6DF1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C72D53615E5CC65009D6DF1 /* ViewController.xib */; };
+		9C72D54015E5CEBD009D6DF1 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C72D53F15E5CEBD009D6DF1 /* TableViewController.m */; };
+		9C72D54515E5D4B9009D6DF1 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C72D54415E5D4B9009D6DF1 /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		9C72D52F15E5CC65009D6DF1 /* QuickContactsTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickContactsTableView-Prefix.pch"; sourceTree = "<group>"; };
 		9C72D53015E5CC65009D6DF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9C72D53115E5CC65009D6DF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9C72D53315E5CC65009D6DF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9C72D53415E5CC65009D6DF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9C72D53715E5CC65009D6DF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9C72D53E15E5CEBD009D6DF1 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		9C72D53F15E5CEBD009D6DF1 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		9C72D54415E5D4B9009D6DF1 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C72D54515E5D4B9009D6DF1 /* AddressBook.framework in Frameworks */,
 				9C72D52215E5CC65009D6DF1 /* UIKit.framework in Frameworks */,
 				9C72D52415E5CC65009D6DF1 /* Foundation.framework in Frameworks */,
 				9C72D52615E5CC65009D6DF1 /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +51,7 @@
 		9C72D51215E5CC65009D6DF1 = {
 			isa = PBXGroup;
 			children = (
+				9C72D54415E5D4B9009D6DF1 /* AddressBook.framework */,
 				9C72D52715E5CC65009D6DF1 /* QuickContactsTableView */,
 				9C72D52015E5CC65009D6DF1 /* Frameworks */,
 				9C72D51E15E5CC65009D6DF1 /* Products */,
@@ -79,9 +81,8 @@
 			children = (
 				9C72D53015E5CC65009D6DF1 /* AppDelegate.h */,
 				9C72D53115E5CC65009D6DF1 /* AppDelegate.m */,
-				9C72D53315E5CC65009D6DF1 /* ViewController.h */,
-				9C72D53415E5CC65009D6DF1 /* ViewController.m */,
-				9C72D53615E5CC65009D6DF1 /* ViewController.xib */,
+				9C72D53E15E5CEBD009D6DF1 /* TableViewController.h */,
+				9C72D53F15E5CEBD009D6DF1 /* TableViewController.m */,
 				9C72D52815E5CC65009D6DF1 /* Supporting Files */,
 			);
 			path = QuickContactsTableView;
@@ -150,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C72D52C15E5CC65009D6DF1 /* InfoPlist.strings in Resources */,
-				9C72D53815E5CC65009D6DF1 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +163,7 @@
 			files = (
 				9C72D52E15E5CC65009D6DF1 /* main.m in Sources */,
 				9C72D53215E5CC65009D6DF1 /* AppDelegate.m in Sources */,
-				9C72D53515E5CC65009D6DF1 /* ViewController.m in Sources */,
+				9C72D54015E5CEBD009D6DF1 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,14 +176,6 @@
 				9C72D52B15E5CC65009D6DF1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9C72D53615E5CC65009D6DF1 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C72D53715E5CC65009D6DF1 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
